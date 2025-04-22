@@ -1,0 +1,19 @@
+// resources/js/app.tsx
+import { createInertiaApp } from '@inertiajs/react';
+import { createRoot } from 'react-dom/client';
+import '../css/tailwind.css';
+
+createInertiaApp({
+  resolve: async (name) => {
+    try {
+      const module = await import(`./Pages/${name}.tsx`);
+      return module.default;
+    } catch (error) {
+      console.error(`Failed to load page: ${name}`, error);
+      throw error;
+    }
+  },
+  setup({ el, App, props }) {
+    createRoot(el).render(<App {...props} />);
+  },
+});
