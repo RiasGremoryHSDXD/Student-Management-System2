@@ -23,3 +23,7 @@ use App\Services\SupabaseService;
 
 Route::get('/', [CustomerController::class, 'index']);
 Route::get('/favanimetitle', [CustomerController::class, 'anime_fav_title']);
+
+Route::get('/LogInForm', function () {
+    return inertia('LogInForm/LogInForm');
+});
