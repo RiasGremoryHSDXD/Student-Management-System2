@@ -31,3 +31,5 @@ Route::get('/favanimetitle', [CustomerController::class, 'anime_fav_title']);
 Route::get('/LogInForm', function () {
     return inertia('LogInForm/LogInForm');
 });
+
+Route::get('/customers', [CustomerController::class, 'api']);
