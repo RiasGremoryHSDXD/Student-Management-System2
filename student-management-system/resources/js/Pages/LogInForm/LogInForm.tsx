@@ -22,7 +22,6 @@ export default function LogInForm(){
 
     return(
         <div className='log-in-form-container'>
-            <h2>WW</h2>
             <form action="" onSubmit={handleSubmit}>
                 <input
                     className={`border ${isEmailValid ? 'border-gray-500' : 'border-red-500'}`}

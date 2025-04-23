@@ -21,7 +21,11 @@ use App\Services\SupabaseService;
 
 // // Route::get('/customers', [CustomerController::class, 'index']);
 
-Route::get('/', [CustomerController::class, 'index']);
+Route::get('/', function (){
+    return inertia('Main');
+});
+
+Route::get('/CustomerList', [CustomerController::class, 'index']);
 Route::get('/favanimetitle', [CustomerController::class, 'anime_fav_title']);
 
 Route::get('/LogInForm', function () {

@@ -20,7 +20,7 @@ class CustomerController extends Controller
     {
         $customers = $this->supabaseService->getCustomerNames();
         
-        return Inertia::render('Home', [
+        return Inertia::render('Customers', [
             'customers' => $customers
         ]);
     }

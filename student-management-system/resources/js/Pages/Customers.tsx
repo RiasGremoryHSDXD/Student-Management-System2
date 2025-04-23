@@ -6,8 +6,7 @@ interface CustomersProps {
 }
 
 export default function Customers({ customers }: CustomersProps) {
-  console.log(customers)
-  console.log()
+
   return (
     <div className="max-w-6xl mx-auto py-10 px-4">
       <h1 className="text-3xl font-bold mb-6">Customer Names Pages</h1>
