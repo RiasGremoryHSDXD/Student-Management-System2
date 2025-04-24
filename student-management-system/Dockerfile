@@ -30,7 +30,7 @@ RUN composer install --no-interaction --no-dev --optimize-autoloader
 
 # Configure Apache
 # Copy Apache configuration
-COPY docker/000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY student-management-system/docker/000-default.conf /etc/apache2/sites-available/000-default.conf
 
 # Enable Apache modules
 RUN a2enmod rewrite
