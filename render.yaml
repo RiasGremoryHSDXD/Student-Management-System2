@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: student-management-system
+    env: docker
+    dockerfilePath: ./student-management-system/Dockerfile
+    dockerContext: .
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_KEY
+        value: base64:JoDcQS7bXSgYOJQ1Riv0/NHMGkadPRsXen0jmn+kmW4=
+      - key: APP_DEBUG
+        value: false
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_HOST
+        value: db.mmypokiqblqjmfyfekvu.supabase.co
+      - key: DB_PORT
+        value: 5432
+      - key: DB_DATABASE
+        value: postgres
+      - key: DB_USERNAME
+        value: postgres
+      - key: DB_PASSWORD
+        value: iDITN2wS1ESiFU9B
